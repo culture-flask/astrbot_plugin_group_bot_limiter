@@ -1,0 +1,26 @@
+{
+  "enabled": {
+    "description": "启用群聊 Bot 限流",
+    "type": "bool",
+    "default": true,
+    "hint": "仅限制管理员在该群标记的用户。超限时静默忽略，未标记用户与私聊不受影响。"
+  },
+  "window_minutes": {
+    "description": "统计时长（分钟）",
+    "type": "int",
+    "default": 60,
+    "hint": "按最近这段时间滚动统计。范围 1～525600 分钟，默认 60 分钟。"
+  },
+  "max_replies": {
+    "description": "默认：统计时长内最多回复几轮",
+    "type": "int",
+    "default": 3,
+    "hint": "范围 1～10000。标记时未填写次数的 Bot 跟随此默认值；可用 /bot限流 标记 @用户 次数 为某个 Bot 单独设置 0～10000 轮，0 表示静默不回复。每个群、每个被标记用户分别计数；同一条消息的文字、图片、语音与分段算一轮。"
+  },
+  "allow_group_admins": {
+    "description": "允许群主和群管理员管理标记",
+    "type": "bool",
+    "default": true,
+    "hint": "关闭后仅 AstrBot 管理员可以标记、取消标记、查看和重置。AstrBot 管理员始终可管理。"
+  }
+}
