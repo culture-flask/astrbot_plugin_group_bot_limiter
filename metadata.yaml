@@ -1,8 +1,9 @@
 name: astrbot_plugin_group_bot_limiter
 display_name: 群聊 Bot 限流
-desc: 管理员按群标记 Bot，可分别设置各 Bot 的回复次数（含 0 次），不填则跟随默认值；按滚动窗口限流，超限静默。
+desc: 来防止群聊Bot中无限互相@烧token的小插件，可以通过'/bot限流 标记 @对方 [次数]'的命令来设置本方Bot在设定时间内最多回复另一个Bot几次。可分别设置各 Bot 的回复次数（含 0 次），不填则跟随默认值；按滚动窗口限流，超限静默。
 version: v1.2.0
 author: culture-flask
 astrbot_version: '>=4.28.2'
+repo: https://github.com/culture-flask/astrbot_plugin_group_bot_limiter
 support_platforms:
   - aiocqhttp
